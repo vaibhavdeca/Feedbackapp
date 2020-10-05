@@ -1,0 +1,30 @@
+<h1>Create a new user and send feeback answering questions</h1>
+
+<form action="/users" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>"
+    <p>
+        <label>Username: </label>
+        <input type = "text" name=user[username]>
+    </p>
+    <P>
+        <label>Email: </label>
+        <input type = "email" name=user[email]>
+    </p>
+    <P>
+        <label>Phone: </label>
+        <input type = "number" name=user[phone]>
+    </p>
+    <P>
+        <label>Q1: What you liked about us </label>
+        <input type = "text" name=user[fq1]>
+    </p>
+        <P>
+        <label>Q2: What you do not liked about us? </label>
+        <input type = "text" name=user[fq2]>
+    </p>
+        <P>
+        <label>Q3: Any suggestions? </label>
+        <input type = "text" name=user[fq3]>
+    </p>
+    <input type="submit" value="create or see your feedback">
+</form>
